@@ -1,0 +1,49 @@
+extends layout
+
+block variables
+  - var title = 'Contact'
+
+block content
+
+  .row
+    .offset-sm-2.col-sm-8
+      form(
+        action='/contact',
+        id='contact-form',
+        method='POST',
+        role='form'
+        )
+          fieldset
+            div.form-group
+              label(for='name') Name
+              input( 
+                id='name', 
+                name='name', 
+                type='text', 
+                placeholder='Your name', 
+                required
+              )
+            div.form-group
+              label(for='email') Email
+              input(
+                id='email', 
+                name='email', 
+                type='text', 
+                placeholder='Your email', 
+                required
+              )
+            div.form-group 
+              label(for='message') Message
+              textarea( 
+                id='message', 
+                name='message', 
+                placeholder='Enter your message here', 
+                rows='3', 
+                required
+              )
+
+            button.btn(type='submit') Submit
+
+           
+
+      
